@@ -1,2 +1,10 @@
-# Brewery-Search-App
-Search for a nearby brewery in any location! Uses brewerydb API, Google Maps API, and Node Server.
+# BrewYahMaster1
+
+### Install and run:
+
+```
+npm install # the dependencies listed in package.json get installed
+node server.js
+```
+Now open index.html in a browser
+
