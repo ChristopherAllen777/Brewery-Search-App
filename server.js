@@ -55,9 +55,11 @@ app.get('/breweries', function(req, res, next) {
 
 // required if you wanna serve a file
 // app.use(express.static(__dirname + '/public'));
-
-server.listen(3000);
-console.log("--------------------------------");
-console.log("Connected to Brewery App Server");
-console.log('');
-console.log("Keep this server running to allow functionability with the app.\n If the server is not running the API will not work.\n No connection = no dropped pins.");
+app.listen(PORT, function() {
+  console.log("App listening on PORT " + PORT);
+});
+// server.listen(3000);
+// console.log("--------------------------------");
+// console.log("Connected to Brewery App Server");
+// console.log('');
+// console.log("Keep this server running to allow functionability with the app.\n If the server is not running the API will not work.\n No connection = no dropped pins.");
