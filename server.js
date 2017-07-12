@@ -23,7 +23,7 @@ app.get('/', function(req, res, next) {
     // https://codeforgeek.com/2015/01/render-html-file-expressjs/
     // res.sendFile(path.join(__dirname + '/public/brew.html'))
     console.log('an example of how to serve a file');
-    res.send('hi');
+    res.sendFile(path.join(__dirname, "index.html"));
 })
 
 app.get('/breweries', function(req, res, next) {
