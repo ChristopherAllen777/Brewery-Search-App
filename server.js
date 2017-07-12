@@ -4,6 +4,7 @@ var app = express();
 var request = require('request');
 var path = require('path');
 var server = require('http').createServer(app);
+var PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.options('*', cors());
