@@ -96,10 +96,13 @@ function getBreweryLocations(lat, lng) {
 function initMap(locations) {
     function addMarker(dataset, map_object) {
         var marker = new google.maps.Marker({
+            animation: google.maps.Animation.DROP,
             position: dataset.location,
             map: map_object,
             url: dataset.url,
-            name: dataset.name
+            name: dataset.name,
+            phone: dataset.phone,
+            image: dataset.icon
         });
         return marker
     }
@@ -132,7 +135,7 @@ function initMap(locations) {
                 currentMarkerId = JSON.stringify(e.latLng.lat() + e.latLng.lng()).replace(".", "?");
                 
                 $("#breweryReview").empty();
-                $("#breweryName").html(marker.name + "<br>" + "<a href=\"" + marker.url + "\"" + "target=\"_blank\"" + ">" + marker.url + "</a>");
+                $("#breweryName").html(marker.name + "<br>" + "<a href=\"" + marker.url + "\"" + "target=\"_blank\"" + ">" + marker.url + "</a>" + "<br>" + marker.image);
                 $("#initialInfo").css({
                     "display": "none"
                 });

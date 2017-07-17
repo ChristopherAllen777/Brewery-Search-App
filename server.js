@@ -6,6 +6,9 @@ var path = require('path');
 var server = require('http').createServer(app);
 var PORT = process.env.PORT || 3000;
 
+// define the path to use style sheets & images - public folder
+app.use(express.static(path.join(__dirname, '/public')));
+
 app.use(cors());
 app.options('*', cors());
 
